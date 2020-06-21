@@ -2,6 +2,10 @@
 <html>
     <head>
         <link rel="stylesheet" href="../css/style.css"  >
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+
+
     </head>
     <body>
        
@@ -14,17 +18,22 @@
 
             <div id="container">
 
+
             <div class="search_form">
-                <form action="" method="POST">
+                
                     <label for="search">Form name:</label>
-                    <input id="txt_search" type="text">
-                    <input type="submit" value="Search">
-                </form>
-            </div>
-
-            <div id="form_view">
+                    <select id="seach" name="seach_form">
+                        
+                    </select>
+                    <input type="button" value="Load" onclick="loadForm()" >
 
             </div>
+
+            <div id="form_render"></div>
+            <div id="btn_save"></div>
         </div>
+        <script src="../js/form.js"></script>
+        <script src="../js/jsnon.js"></script> 
+        <script src="../js/test.js"></script>
     </body>
 </html>

@@ -2,6 +2,8 @@
 <html>
     <head>
         <link rel="stylesheet" href="../css/style.css"  >
+        <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.1/d3.min.js"></script>
+
     </head>
     <body>
        
@@ -15,16 +17,21 @@
             <div id="container">
 
             <div class="search_form">
-                <form action="" method="POST">
-                    <label for="search">Form name:</label>
-                    <input id="txt_search" type="text">
-                    <input type="submit" value="Search">
-                </form>
+                
+                    <label for="search" >Form name:</label>
+                    <input id="txt_search" type="text" value="form" name="form">
+                    <select id="seach" name="seach_form">
+                        <option id="opt" value=""></option>
+                    </select>
+                    <button value="serche" id="serchBtn" onclick="search()">Search</button>
+                
             </div>
-
-            <div id="form_view">
-
+            
+            <div id="form_view"></div>
+            <div id="new_elm"></div>
+            <div id="btn_save"></div>
             </div>
-        </div>
+      <script src="../js/jsnon.js"></script> 
+      <script src="../js/form.js"></script>
     </body>
 </html>

@@ -12,7 +12,7 @@ body{
 .search_form{
     position: absolute;
     padding: 4px;
-    padding-top: opx;
+    padding-top: 0px;
     margin: 5px;
     margin-top: 0px;
     top: 40px;
@@ -46,4 +46,47 @@ body{
 }
 .nav_bar a{
     text-decoration: none;
+}
+
+#new_elm{
+    position: absolute;
+    top: 90px;
+    left: 10%;
+    right: 10%;
+    margin: 0px;
+    padding: 10px;
+    resize: inherit;
+}
+
+#form_view{
+    position: absolute;
+    
+    left: 10%;
+    right: 10%;
+    display: inline;
+    margin: 0px;
+    padding: 10px;
+
+}
+#btn_save{
+    position: absolute;
+    left: 85%;
+    right: 15%;
+    top: 400px;
+    height: 50px;
+    width: 130px;
+    
+
+}
+#form_builder{
+    visibility: hidden;
+}
+#form_render{
+    position: absolute;
+    top: 100px;
+    left: 10%;
+    right: 10%;
+    display: inline;
+    margin: 0px;
+    padding: 10px;
 }

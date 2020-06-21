@@ -1,23 +1,38 @@
-import {UserController} from "./controller/UserController";
+import { FormController } from "./controller/FormController";
+import { SearchController } from "./controller/SearchController";
 
 export const Routes = [{
-    method: "get",
-    route: "/users",
-    controller: UserController,
-    action: "all"
-}, {
-    method: "get",
-    route: "/users/:id",
-    controller: UserController,
-    action: "one"
-}, {
-    method: "post",
-    route: "/users",
-    controller: UserController,
-    action: "save"
-}, {
+    
+    method:"get",
+    route:"/form",
+    controller:FormController,
+    action:"all"
+},{
+    method:"get",
+    route:"/form/:id",
+    controller:FormController,
+    action:"one"
+},
+{
+    method:"post",
+    route:"/form",
+    controller:FormController,
+    action:"save"
+},{
     method: "delete",
-    route: "/users/:id",
-    controller: UserController,
+    route: "/form/:id",
+    controller: FormController,
     action: "remove"
-}];
+},
+{
+    method:"get",
+    route:"/serach/:formName",
+    controller:SearchController,
+    action:"one"
+},{
+    method:"get",
+    route:"/serach",
+    controller:SearchController,
+    action:"all"
+}
+];
