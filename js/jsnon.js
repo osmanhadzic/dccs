@@ -388,8 +388,10 @@ function save(){
     fo.setAttribute('id','admin')
     fo.appendChild(div);
     
-    var json = mapDOM(fo, true);
-    console.log(json);
+     var js = mapDOM(fo, true);
+    console.log(JSON.parse(js));
+    post(JSON.parse(js));
+   
 
    
 }
@@ -441,6 +443,16 @@ function mapDOM(element, json) {
 
     return (json) ? JSON.stringify(treeObject) : treeObject;
 }
-
+function post(j){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      console.log(this.response);
+    }
+  };
+  xhttp.open("POST", "http://localhost:3000/admin", true);
+  xhttp.setRequestHeader("Content-type", "application/json");
+  xhttp.send(JSON.stringify(j));
+}
    
 
